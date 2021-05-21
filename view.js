@@ -3,6 +3,7 @@ const figlet = require('figlet');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const { initModel } = require('./model');
+const {printTable} = require('console-table-printer');
 
 //this function create the title
 function getTitle(){
@@ -17,4 +18,15 @@ function getTitle(){
     )
 }
 
+function getTable(model){
+    return [
+        {
+        "leftValue": model.leftValue,
+        "leftUnit": model.leftUnit,
+        "rightValue": model.rightValue,
+        "rightUnit": model.rightUnit
+        }
+    ]
+}
 console.log(getTitle());
+printTable(getTable(initModel));
