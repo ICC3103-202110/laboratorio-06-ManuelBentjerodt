@@ -1,3 +1,4 @@
+//we import some modules and parte of the code, we return the title and the table and ask user inputs we have to use
 const figlet = require('figlet');
 const chalk = require('chalk');
 const inquirer = require('inquirer');

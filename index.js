@@ -1,3 +1,4 @@
+//This is the main code, we import some modules, create the state, and call the app
 const {initModel} = require('./model');
 const {update} = require('./update');
 const {view} = require('./view');
@@ -9,6 +10,3 @@ const state = {
 }
 
 app(state,update,view);
-/*
-if(typeof a === "number") console.log("caca");
-*/
