@@ -8,10 +8,7 @@ const state = {
     currentView: view(initModel)
 }
 
-
-let a = 10;
-
-app(state,true,true);
+app(state,update,view);
 /*
 if(typeof a === "number") console.log("caca");
 */

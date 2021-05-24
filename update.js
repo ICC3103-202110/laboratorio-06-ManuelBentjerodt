@@ -28,3 +28,32 @@ function rightValueF(source,leftValue,from,to){
 
     }
 }
+
+function update(model,source,leftValue,from,to){
+    if(source === "Yes" || source === "yes" || source === "Y" || source === "y"){
+        return{
+            ...model,
+            leftValue: leftValue,
+            leftUnit: from,
+            rightValue: rightValueF(source,leftValue,from,to),
+            rightUnit: to,
+            temperatureValue: leftValue
+
+        }
+    }
+    else if(source === "No" || source === "no" || source === "N" || source === "n"){
+        return{
+            ...model,
+            leftValue: rightValueF(source,leftValue,from,to),
+            leftUnit: to,
+            rightValue: leftValue,
+            rightUnit: from,
+            temperatureValue: leftValue
+
+        }
+    }
+
+}
+module.exports={
+    update
+}
